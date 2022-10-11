@@ -1,4 +1,4 @@
-import java.awt.Component;
+import java.awt.*;
 import javax.swing.*;
 
 public class TicTacToeGUI
@@ -12,7 +12,12 @@ public class TicTacToeGUI
       mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       JPanel mainPanel = new JPanel();
+
+      // set the background color of the panel that contains everything
+      mainPanel.setBackground(new Color(227, 206, 245));
+      // align the components of the main panel vertically
       mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+      // add some padding to the edges of the main panel
       mainPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
       JLabel instructions = new JLabel("Your piece is O");
@@ -20,6 +25,8 @@ public class TicTacToeGUI
       mainPanel.add(instructions);
 
       buttons.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+      // make the buttons panel "see-through"
+      buttons.setOpaque(false);
       mainPanel.add(buttons);
 
       mainFrame.add(mainPanel);
