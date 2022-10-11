@@ -37,6 +37,7 @@ public class TicTacToeButtons extends JPanel
          if (piece != null)
          {
             this.buttons[i].setText(piece.toString());
+            this.buttons[i].setEnabled(false);
          }
       }
    }
