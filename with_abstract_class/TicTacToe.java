@@ -21,7 +21,7 @@ public class TicTacToe
          terminal.showBoard();
 
          winner = board.getWinner();   
-         if (board.isFull() || winner != null)
+         if (board.isFull() || done  != null)
          {
             break;
          }
@@ -29,7 +29,7 @@ public class TicTacToe
          nextPlayer = (nextPlayer + 1) % 2;
       }
 
-      if (winner != null)
+      if (done != null)
       {
          System.out.println("Winner is " + winner);
       }
